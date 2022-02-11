@@ -1,21 +1,19 @@
 #ifndef EXECUTIVE_H
 #define EXECUTIVE_H
-
-#include <iostream>
-#include <fstream>
 #include <string>
-#include "mazeWalker.h"
 
 class Executive
 {
-private:
-  std::string filename;
-
-public:
-  Executive(char* input);
+  public:
+  Executive();
   ~Executive();
-  void run();
-
+  /**
+  * @pre: none
+  * @post: creates mazewalker object, calls to solve maze and print solution
+  * @return: none
+  * @throw: none
+  **/
+  void run(std::string filname);
 };
 
 #endif

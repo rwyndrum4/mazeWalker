@@ -1,20 +1,23 @@
+#include "MazeWalker.h"
+#include "Maze.h"
 #include "Executive.h"
-#include "mazeWalker.h"
-#include <iostream>
-#include <fstream>
 #include <string>
+#include <iostream>
+using namespace std;
 
-Executive::Executive(char* input)
+Executive::Executive()
 {
-  filename = input;
+  //
 }
 
 Executive::~Executive()
 {
-
+  //
 }
 
-void Executive::run()
+void Executive::run(std::string filename)
 {
-  
+  MazeWalker myWalker(filename);
+  myWalker.solveMaze();
+  myWalker.printSolution();
 }
